@@ -365,3 +365,80 @@
 </body>
 
 </html>
+
+<script>
+    function sendSMS() {
+        console.log("sending sms");
+    
+        // Retrieve form data
+        const fullName = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const packageSelect = document.getElementById('package'); // Corrected the variable name
+        const packageChoice = packageSelect.options[packageSelect.selectedIndex].text;
+        const message = document.getElementById('message').value;
+    
+        let formattedphone = '254' + phone.slice(1);
+    
+        // Prepare SMS message
+        const smsMessage = ` A client has sent you a message from your Website! Name: ${fullName}\nPhone: ${phone}\nPackage: ${packageChoice}\nMessage: ${message}`;
+    
+        // Prepare payload
+        const payload = {
+            "userid": "Willy",
+            "password": "GX98BFfh",
+            "senderid": "KINYATHENA",
+            "msgType": "text",
+            "duplicatecheck": "true",
+            "sendMethod": "quick",
+            "sms": [{
+                    "mobile": [254759777222],
+                    "msg": smsMessage
+                },
+                {
+                    "mobile": [formattedphone],
+                    "msg": "Thank you for your message, Flossin Trading Hub Will be in touch with you soon"
+                }
+            ]
+        };
+    
+        // Convert payload to JSON
+        const jsonPayload = JSON.stringify(payload);
+        console.log(jsonPayload);
+    
+        // URL to send the SMS via CORS proxy
+        const corsProxyUrl = 'https://corsproxy.io/?';
+        const smsUrl = 'https://portal.zettatel.com/SMSApi/send';
+        const url = corsProxyUrl + encodeURIComponent(smsUrl);
+    
+        // Set the headers
+        const headers = {
+            'Content-Type': 'application/json'
+        };
+    
+        // Send SMS using fetch
+        fetch(url, {
+                method: 'POST',
+                headers: headers,
+                body: jsonPayload
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("SMS sent successfully.");
+                    alert("Message sent successfully");
+                } else {
+                    console.error("Failed to send SMS. Response status code:", response.status);
+                    alert("Failed to send message. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.error('Error sending SMS:', error);
+                alert("Failed to send message. Please check your internet connection.");
+            });
+    }
+    
+    // Add event listener to form submit button
+    document.getElementById('contact').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        sendSMS(); // Call sendSMS function
+    });
+</script>

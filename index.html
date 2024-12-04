@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flossin-Trading Hub</title>
+    <title>Flossin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -70,8 +70,8 @@
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fas fa-crown me-2"></i>Flossin-Trading Hub&reg;</h1>
+            <a href="index.html" class="navbar-brand p-0" style="position:sticky">
+                <h1 class="m-0"><i class="fas fa-crown me-2"></i>Flossin&reg;</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -83,7 +83,7 @@
                     <a href="service.html" class="nav-item nav-link">Services</a>
                     <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
                     <a href="price.html" class="nav-item nav-link">Pricing</a>
-                    
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                     <a href="tools.html" class="nav-item nav-link">Trading Tools</a>
                 </div>
                 
@@ -353,10 +353,241 @@
         </div>
     </div>
     <!-- Service End -->
+<!--Trading Tools Start-->
+<div class="trading-bots-section">
+    <h2>Trading Bots</h2>
+    <p>Explore our cutting-edge trading bots designed to enhance your trading experience.  
+        These bots are equipped with advanced algorithms to ensure optimal performance  
+        and profitability.</p>
+    <div class="bot-plans">
+        <!-- 2024 Bot -->
+        <div class="bot-plan">
+            <h3>2024 Bot</h3>
+            <p>For Advanced Traders</p>
+            <p class="price">KES 15,000/=</p>
+            <ul>
+                <li>AI-Driven Predictions</li>
+                <li>Real-time Market Analysis</li>
+                <li>High Speed Execution</li>
+                <li>Risk Management</li>
+            </ul>
+            <div class="button-group">
+                <!-- Buy Now Button Links to payment.html -->
+                <a href="payment.html" class="purchase-btn">Buy Now</a>
+                <!-- Demo Button -->
+                <button class="demo-btn" onclick="viewVideo('2025')">Demo</button>
+            </div>
+            
+        </div>
+        <!-- 2025 Bot -->
+        <div class="bot-plan">
+            <h3>2025 Bot</h3>
+            <p>For Professional Traders</p>
+            <p class="price">KES 20,000/=</p>
+            <ul>
+                <li>Enhanced AI Features</li>
+                <li>Liquidity Scanning</li>
+                <li>Customizable Strategies</li>
+                <li>Advanced Risk Controls</li>
+            </ul>
+            <div class="button-group">
+                <!-- Buy Now Button Links to payment.html -->
+                <a href="payment.html" class="purchase-btn">Buy Now</a>
+                <!-- Demo Button -->
+                <button class="demo-btn" onclick="viewVideo('2025')">Demo</button>
+            </div>
+            
+        </div>
+        <!-- Freebie Bot -->
+        <div class="bot-plan">
+            <h3>Freebie Bot</h3>
+            <p>For Beginners</p>
+            <p class="price">Free</p>
+            <ul>
+                <li>Basic Trading Features</li>
+                <li>Simple Market Analysis</li>
+                <li>User-Friendly Interface</li>
+                <li>Free Updates</li>
+            </ul>
+            <div class="button-group">
+                <!-- Buy Now Button Links to payment.html -->
+                <a href="payment.html" class="purchase-btn">Buy Now</a>
+                <!-- Demo Button -->
+                <button class="demo-btn" onclick="viewVideo('2025')">Demo</button>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideo()">&times;</span>
+            <video id="botVideo" controls autoplay>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
 
-    <!--Trading Tools Start -->
-    
-    <!--Trading Tools End-->
+<style>
+/* Trading Bots Section */
+.trading-bots-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5faff;
+}
+
+.trading-bots-section p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.bot-plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.bot-plan {
+    background: #e8f5ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bot-plan h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.bot-plan .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bot-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    color: #444;
+}
+
+.bot-plan ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.purchase-btn, .demo-btn {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+}
+
+.purchase-btn {
+    background: #007bff;
+    color: #fff;
+}
+
+.demo-btn {
+    background: #fff;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.purchase-btn:hover, .demo-btn:hover {
+    opacity: 0.8;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+    max-width: 800px;
+    width: 80%;
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bot-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bot-plan {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+</style>
+
+<script>
+function viewVideo(bot) {
+    const videoModal = document.getElementById('videoModal');
+    const botVideo = document.getElementById('botVideo');
+
+    // Set video source based on bot
+    botVideo.src = `videos/${bot}_bot_demo.mp4`;
+
+    videoModal.style.display = 'flex';
+}
+
+function closeVideo() {
+    const videoModal = document.getElementById('videoModal');
+    const botVideo = document.getElementById('botVideo');
+
+    botVideo.pause();
+    botVideo.src = '';
+    videoModal.style.display = 'none';
+}
+</script>
+<!--Trading Tools End-->
+
+
 
 
     <!-- Pricing Plan Start -->
@@ -480,7 +711,37 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                        <form id="contact" action="https://api.web3forms.com/submit" method="POST">
+                            <div class="row g-3">
+                                <input type="hidden" name="access_key" value="41dedeea-c233-4265-a437-c641aee6053c">
+                                <div class="col-xl-12">
+                                    <input id="name" name="name" type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12">
+                                    <input name="phone" id="phone" type="number" class="form-control bg-light border-0" placeholder="Your Whatsapp Number" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12">
+                                    <select name="package" id="package" class="form-select bg-light border-0" style="height: 55px;" required>
+                                        <option selected>Select A Package</option>
+                                        <option value="1">Binary Trading</option>
+                                        <option value="1">Binary Bots</option>
+                                        <option value="1">Premium Forex Signals</option>
+                                        <option value="2">Forex  Trading Mentorship</option>
+                                        <option value="3">Crpto Consultancy</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea id="message" name="message" required class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button id="form-submit" class="btn btn-dark w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -931,82 +1192,7 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <script>
-        function sendSMS() {
-            console.log("sending sms");
-        
-            // Retrieve form data
-            const fullName = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const packageSelect = document.getElementById('package'); // Corrected the variable name
-            const packageChoice = packageSelect.options[packageSelect.selectedIndex].text;
-            const message = document.getElementById('message').value;
-        
-            let formattedphone = '254' + phone.slice(1);
-        
-            // Prepare SMS message
-            const smsMessage = ` A client has sent you a message from your Website! Name: ${fullName}\nPhone: ${phone}\nPackage: ${packageChoice}\nMessage: ${message}`;
-        
-            // Prepare payload
-            const payload = {
-                "userid": "Willy",
-                "password": "GX98BFfh",
-                "senderid": "KINYATHENA",
-                "msgType": "text",
-                "duplicatecheck": "true",
-                "sendMethod": "quick",
-                "sms": [{
-                        "mobile": [254759777222],
-                        "msg": smsMessage
-                    },
-                    {
-                        "mobile": [formattedphone],
-                        "msg": "Thank you for your message, Flossin Trading Hub Will be in touch with you soon"
-                    }
-                ]
-            };
-        
-            // Convert payload to JSON
-            const jsonPayload = JSON.stringify(payload);
-            console.log(jsonPayload);
-        
-            // URL to send the SMS via CORS proxy
-            const corsProxyUrl = 'https://corsproxy.io/?';
-            const smsUrl = 'https://portal.zettatel.com/SMSApi/send';
-            const url = corsProxyUrl + encodeURIComponent(smsUrl);
-        
-            // Set the headers
-            const headers = {
-                'Content-Type': 'application/json'
-            };
-        
-            // Send SMS using fetch
-            fetch(url, {
-                    method: 'POST',
-                    headers: headers,
-                    body: jsonPayload
-                })
-                .then(response => {
-                    if (response.ok) {
-                        console.log("SMS sent successfully.");
-                        alert("Message sent successfully");
-                    } else {
-                        console.error("Failed to send SMS. Response status code:", response.status);
-                        alert("Failed to send message. Please try again later.");
-                    }
-                })
-                .catch(error => {
-                    console.error('Error sending SMS:', error);
-                    alert("Failed to send message. Please check your internet connection.");
-                });
-        }
-        
-        // Add event listener to form submit button
-        document.getElementById('contact').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            sendSMS(); // Call sendSMS function
-        });
-    </script>
+    
         
 
     <!-- JavaScript Libraries -->
